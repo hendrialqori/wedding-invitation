@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .container-box {
+    @apply max-w-[1440px] px-[3.5rem] mx-auto
+  }
+
+  .container-box2 {
+    @apply max-w-[1440px] px-[7.875rem] mx-auto
+  }
+
+  .heading-1 {
+    @apply text-[6.875rem] leading-[120%]
+  }
+
+  .heading-2 {
+    @apply text-[4.25rem] leading-[120%]
+  }
+
+  .heading-3 {
+    @apply text-[2.625rem] leading-[120%]
+  }
+
+  .heading-4 {
+    @apply text-[1.625rem] leading-[120%]
+  }
+}
