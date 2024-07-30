@@ -1,3 +1,5 @@
+"use client";
+
 import { RiArrowUpWideLine } from "react-icons/ri";
 import LocomotiveScroll, { ScrollToTarget } from 'locomotive-scroll';
 
