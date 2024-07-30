@@ -26,7 +26,7 @@ const anim = (variants: Variants) => ({
     initial: "initial",
     whileInView: "animate",
     viewport: {
-        once: false
+        once: true
     }
 })
 
