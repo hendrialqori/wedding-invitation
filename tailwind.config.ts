@@ -22,7 +22,9 @@ const config: Config = {
       },
       margin: {
         betweenSection: "10rem",
-        betweenBox: "3.75rem"
+        betweenSectionMd: "8.75rem",
+        betweenBox: "3.75rem",
+        betweenBoxMd: "1.75rem"
       }
     },
   },
