@@ -56,12 +56,12 @@ export default function Home() {
       {isOpenInvitation && (
         <>
           <Hero />
-          {/* <Profile />
+          <Profile />
           <OurStory />
           <Gallery />
           <Event />
           <Countdown />
-          <Footer /> */}
+          <Footer />
         </>
       )}
     </SmoothScroll>
