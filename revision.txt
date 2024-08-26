@@ -1,0 +1,6 @@
+1. Add layer untuk kontras tulisan hero dan smooth transition ✅
+2. Gallery mode hape tetep 2 kolom dan tambah Modal ✅
+3. Highlight button gift ✅
+4. Wish list ✅
+5. Reservation ✅
+6. Simple dashboard

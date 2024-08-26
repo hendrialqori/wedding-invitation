@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .container-box {
+    @apply w-full md:w-[calc(100%-7vw)] max-w-[1440px] mx-auto
+  }
+
+  .container-box2 {
+    @apply w-full md:w-[calc(100%-7vw)] xl:px-[7.875rem] max-w-[1440px] mx-auto
+  }
+
+  /* 110px */
+  .heading-1 {
+    @apply text-[6.875rem] leading-[120%]
+  }
+
+  /* 68px */
+  .heading-2 {
+    @apply text-[4.25rem] leading-[120%]
+  }
+
+  /* 42px */
+  .heading-3 {
+    @apply text-[2.625rem] leading-[120%]
+  }
+
+  /* 26px */
+  .heading-4 {
+    @apply text-[1.625rem] leading-[120%]
+  }
+}
