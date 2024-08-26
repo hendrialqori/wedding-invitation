@@ -1,6 +1,9 @@
+"use client"
+
 import { motion, type Variants } from "framer-motion"
 import Image from "next/image"
 import ProgressiveImage from "@/components/ProgressiveImage"
+import MotionHeading from "@/components/Motion"
 
 export default function Profile() {
 
@@ -42,7 +45,7 @@ export default function Profile() {
                         <p className="text-sm md:text-base font-roboto-slab">Tn. Edward and Ny. Lui Lina Tan</p>
                     </div>
                 </motion.div>
-                <motion.h3 className="heading-4 md:heading-3 font-dancing-script font-bold"  {...anim({ duration: 1, delay: .3 })}>&</motion.h3>
+                <MotionHeading className="heading-4 md:heading-3 font-dancing-script font-bold"  {...anim({ duration: 1, delay: .3 })}>&</MotionHeading>
                 <motion.div className="text-center space-y-5 md:space-y-7" {...anim({ duration: 1, delay: .4 })}>
                     <h3 className="heading-4 md:heading-3 font-dancing-script font-bold">
                         Christine

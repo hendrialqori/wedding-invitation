@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa6";

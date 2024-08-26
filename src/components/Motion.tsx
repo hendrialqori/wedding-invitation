@@ -1,21 +1,12 @@
-import { motion } from "framer-motion"
 import React from "react"
+import { motion, type MotionProps } from "framer-motion"
+import { Slot, Slottable } from '@radix-ui/react-slot';
 
-
-type Props<T extends "div"> = React.ComponentProps<T> & {
-    as: string,
-}
-
-type Refs = HTMLElement
-
-const Motion = <T extends "div">(props: Props<T>) => {
-
-    const Component = props.as || "div"
-
+export default function MotionHeading({ children, ...motionProps }
+    : React.ComponentPropsWithoutRef<"h1"> & MotionProps) {
     return (
-        //@ts-ignore
-        <Component>
-            {props.children}
-        </Component>
+        <motion.h1 {...motionProps}>
+            {children}
+        </motion.h1>
     )
 }

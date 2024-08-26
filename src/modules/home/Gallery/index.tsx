@@ -1,8 +1,10 @@
+"use client"
+
+import React from "react"
 import { motion, type Variants } from "framer-motion"
 import Image from "next/image"
 import { twMerge } from 'tailwind-merge'
 import ModalGallery from "./ModalGallery"
-import React from "react"
 
 const bluryEffect: Variants = {
     initial: {

@@ -5,56 +5,56 @@ import { AnimatePresence } from "framer-motion";
 import Image from "next/image"
 import { RiArrowDownWideLine } from "react-icons/ri"
 import { motion, type Variants } from 'framer-motion'
-import { useSearchParams } from 'next/navigation'
+import { useInvitation } from "@/store/useInvitation";
+import { useMusic } from "@/hooks/useMusic";
 
-type Props = {
-    open: boolean;
-    onOpen: () => void
+const variants: Variants = {
+    initial: {
+        opacity: 1,
+        y: 0
+    },
+    animate: {
+        opacity: 1,
+        y: 0
+    },
+    exit: {
+        opacity: 0,
+        y: "40px"
+    }
 }
 
-type ContentProps = Pick<Props, 'onOpen'>
+const anim = ({ delay }: { delay: number }) => ({
+    variants: variants,
+    initial: "initial",
+    animate: "animate",
+    exit: "exit",
+    transition: {
+        duration: 0.8,
+        type: "spring",
+        delay
+    }
+})
 
+export default function Invitation() {
+    const invitation = useInvitation()
 
-export default function Invitation({ open, onOpen }: Props) {
     return (
-        <AnimatePresence>
-            {!open &&
-                <Content onOpen={onOpen} />}
+        <AnimatePresence initial={false} mode="wait">
+            {!invitation.isOpen &&
+                <Card />}
         </AnimatePresence>
     )
 }
 
-function Content(props: ContentProps) {
+function Card() {
 
-    const search = useSearchParams()
-    // const inviteFor = (search.get("to"))
+    const invitation = useInvitation()
+    const music = useMusic()
 
-    const variants: Variants = {
-        initial: {
-            opacity: 1,
-            y: 0
-        },
-        animate: {
-            opacity: 1,
-            y: 0
-        },
-        exit: {
-            opacity: 0,
-            y: "40px"
-        }
+    function openInvitation() {
+        invitation.openInvitation()
+        music.play()
     }
-
-    const anim = ({ delay }: { delay: number }) => ({
-        variants: variants,
-        initial: "initial",
-        animate: "animate",
-        exit: "exit",
-        transition: {
-            duration: 0.8,
-            type: "spring",
-            delay
-        }
-    })
 
     return (
         <section
@@ -79,7 +79,7 @@ function Content(props: ContentProps) {
                     <p className="font-medium">{inviteFor ?? "-"}</p>
                 </div> */}
                 <div className="flex justify-start md:justify-center items-center pt-4">
-                    <button onClick={props.onOpen} className="group">
+                    <button onClick={openInvitation} className="group">
                         <div className="flex flex-col justify-center items-center border border-black rounded-lg px-4 py-2 pb-1 -space-y-1">
                             <p className="font-roboto-slab text-sm">Open Invitation</p>
                             <RiArrowDownWideLine className="text-3xl group-hover:translate-y-1 group-active:scale-75 transition duration-300" />
@@ -104,3 +104,7 @@ function Content(props: ContentProps) {
         </section >
     )
 }
+
+
+// const search = useSearchParams()
+// const inviteFor = (search.get("to"))P

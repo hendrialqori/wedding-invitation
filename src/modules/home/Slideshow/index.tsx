@@ -1,4 +1,3 @@
-import React from "react"
 import ImageShow from "./ImageShow"
 
 export default function Slideshow() {

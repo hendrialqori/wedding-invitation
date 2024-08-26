@@ -1,4 +1,5 @@
-"use client"
+import React from 'react';
+import dynamic from 'next/dynamic';
 
 import Profile from './Profile';
 import Gallery from "./Gallery";
@@ -7,46 +8,38 @@ import Event from "./Event";
 import Countdown from "./Countdown";
 import Invitation from './Invitation';
 import BankATM from './BankATM';
-import dynamic from 'next/dynamic';
 import Slideshow from './Slideshow';
 import Guestbook from './Guestbook';
 import Reservation from './Reservation';
-import HomeWrapper from './HomeWrapper';
-import React from 'react';
+import ButtonMusic from './ButtonMusic';
 
 const Footer = dynamic(() => import("@/modules/home/Footer"), { ssr: false })
+const SmoothScroll = dynamic(() => import("@/components/SmothScroll"), { ssr: false })
 
 export default function HomeModule() {
     return (
-        <HomeWrapper>
-            {({ isOpen, onOpen }) => (
-                <React.Fragment>
-                    <Invitation
-                        open={isOpen}
-                        onOpen={onOpen}
-                    />
-                    <Content open={isOpen} />
-                </React.Fragment>
-            )}
-        </HomeWrapper>
+        <>
+            {/* <ButtonMusic /> */}
+            {/* <Invitation /> */}
+            <Content />
+        </>
     )
 }
 
-function Content({ open }: { open: boolean }) {
+function Content() {
     return (
-        open && (
-            <>
-                <Slideshow />
-                <Profile />
-                <OurStory />
-                <Gallery />
-                <Event />
-                <BankATM />
-                <Guestbook />
-                <Reservation />
-                <Countdown />
-                <Footer />
-            </>
-        )
+        <React.Fragment>
+            <Slideshow />
+            <Profile />
+            <OurStory />
+            <Gallery />
+            <Event />
+            <BankATM />
+            <Guestbook />
+            <Reservation />
+            <Countdown />
+            <Footer />
+        </React.Fragment>
     )
 }
+
