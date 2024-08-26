@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, type Variants } from "framer-motion"
 import Form from "./Form"
 import Wishes from "./Wishes"

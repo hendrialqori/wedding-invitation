@@ -1,3 +1,5 @@
+"use client"
+
 import { GoDotFill } from "react-icons/go";
 import { IoCalendarClearOutline } from "react-icons/io5";
 import { BsClock } from "react-icons/bs";

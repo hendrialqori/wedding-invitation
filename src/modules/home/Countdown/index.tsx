@@ -1,5 +1,7 @@
-import { Variants, motion } from "framer-motion";
+"use client";
+
 import React from "react"
+import { Variants, motion } from "framer-motion";
 
 type Time = {
     days: number;
@@ -82,9 +84,9 @@ export default function Countdown() {
                 {...anim(stagger)}
             >
                 <Li type="Days" value={time.days} delay={0.2} />
-                <Li type="Hour" value={time.hour} delay={0.4}/>
-                <Li type="Minutes" value={time.minute} delay={0.6}/>
-                <Li type="Seconds" value={time.second} delay={0.8}/>
+                <Li type="Hour" value={time.hour} delay={0.4} />
+                <Li type="Minutes" value={time.minute} delay={0.6} />
+                <Li type="Seconds" value={time.second} delay={0.8} />
             </motion.div>
         </section>
 

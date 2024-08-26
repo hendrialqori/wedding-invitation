@@ -11,6 +11,7 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "dayjs": "^1.11.12",
     "firebase": "^10.13.0",
     "framer-motion": "^11.3.18",
@@ -24,7 +25,8 @@
     "sharp": "^0.33.5",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
