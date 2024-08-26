@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useInView } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 const photos = [
     "/photos/slideshow/1.jpg",
