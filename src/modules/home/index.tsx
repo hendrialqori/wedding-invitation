@@ -18,17 +18,17 @@ const SmoothScroll = dynamic(() => import("@/components/SmothScroll"), { ssr: fa
 
 export default function HomeModule() {
     return (
-        <>
-            {/* <ButtonMusic /> */}
-            {/* <Invitation /> */}
+        <SmoothScroll>
+            <Invitation />
             <Content />
-        </>
+        </SmoothScroll>
     )
 }
 
 function Content() {
     return (
         <React.Fragment>
+            <ButtonMusic />
             <Slideshow />
             <Profile />
             <OurStory />

@@ -5,7 +5,7 @@ import z from "zod"
 import { toast } from "sonner";
 import { db_firestore } from "@/configs/firebase";
 import { doc, setDoc } from "firebase/firestore";
-import { uniqueId } from "@/utils/helpers";
+import { uniqueId } from "@/lib/utils";
 
 const pattern = /[<>*'"`=)(:;\/\\]/;
 

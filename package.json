@@ -12,6 +12,7 @@
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
+    "@uidotdev/usehooks": "^2.4.1",
     "dayjs": "^1.11.12",
     "firebase": "^10.13.0",
     "framer-motion": "^11.3.18",

@@ -25,6 +25,7 @@ const Content = () => {
             locomotiveScroll.scrollTo(hero as ScrollToTarget, {
                 duration: 5
             });
+
         } catch (error) {
             console.log(error)
         }
