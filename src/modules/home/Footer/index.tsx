@@ -1,7 +1,7 @@
 "use client";
 
 import { RiArrowUpWideLine } from "react-icons/ri";
-// import LocomotiveScroll, { ScrollToTarget } from 'locomotive-scroll';
+import LocomotiveScroll, { ScrollToTarget } from 'locomotive-scroll';
 
 export default function Footer() {
     return (
@@ -17,14 +17,14 @@ export default function Footer() {
 }
 
 const Content = () => {
-    // const locomotiveScroll = new LocomotiveScroll();
+    const locomotiveScroll = new LocomotiveScroll();
 
     const handleScrollToTop = () => {
         try {
-            // const hero = document.querySelector("#hero")
-            // locomotiveScroll.scrollTo(hero as ScrollToTarget, {
-            //     duration: 5
-            // });
+            const hero = document.querySelector("#hero")
+            locomotiveScroll.scrollTo(hero as ScrollToTarget, {
+                duration: 5
+            });
         } catch (error) {
             console.log(error)
         }
