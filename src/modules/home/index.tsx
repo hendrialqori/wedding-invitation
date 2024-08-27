@@ -22,7 +22,6 @@ export default function HomeModule() {
             <Invitation />
             <Content />
         </SmoothScroll>
-    )
 }
 
 function Content() {

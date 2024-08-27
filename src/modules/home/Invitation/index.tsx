@@ -7,6 +7,7 @@ import { useLockBodyScroll } from "@uidotdev/usehooks";
 import { RiArrowDownWideLine } from "react-icons/ri"
 import { motion, type Variants } from 'framer-motion'
 import { useInvitation } from "@/store/useInvitation";
+import { useMusic } from "@/hooks/useMusic";
 
 const variants: Variants = {
     initial: {
@@ -120,6 +121,7 @@ function Card() {
                 </motion.div>
             </section >
         </div>
+
     )
 }
 

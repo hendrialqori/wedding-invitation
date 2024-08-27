@@ -1,11 +1,10 @@
 "use client"
 
-import React from "react";
+import { useMusic } from "@/hooks/useMusic";
 import { useInvitation } from "@/store/useInvitation";
-import { GiSoundOff } from "react-icons/gi";
-import { GiSoundOn } from "react-icons/gi";
 
 export default function ButtonMusic() {
+  
     const invitation = useInvitation()
 
     const musicRef = React.useRef<HTMLAudioElement | null>(null)
