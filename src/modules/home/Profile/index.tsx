@@ -2,7 +2,6 @@ import { type Variants } from "framer-motion"
 import * as Motion from "@/components/Motion"
 
 import ProgressiveImage from "@/components/ProgressiveImage"
-import MotionHeading from "@/components/Motion"
 
 const variants: Variants = {
     initial: {

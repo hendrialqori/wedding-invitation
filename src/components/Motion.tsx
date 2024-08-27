@@ -19,3 +19,5 @@ export function Box({ children, ...motionProps }
         <motion.div {...motionProps}>
             {children}
         </motion.div>
+    )
+}
